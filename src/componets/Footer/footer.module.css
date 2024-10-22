@@ -1,0 +1,65 @@
+.container {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+    position: relative;
+    bottom: 0;
+    margin-top: 5%;
+    margin: 0 auto;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0auto;
+    padding: 4% 0;
+    text-align: center;
+}
+
+.matiku {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 0;
+}
+
+.morris {
+    color: #696868;
+    font-size: small;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        width: 100vw;
+        margin-top: 10%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .innerContainer {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2% 0;
+    }
+
+    .matiku {
+        font-size: 12px;
+        margin-top: 1%;
+    }
+
+    .morris {
+        font-size: 12px;
+        margin-top: 1%;
+    }
+}

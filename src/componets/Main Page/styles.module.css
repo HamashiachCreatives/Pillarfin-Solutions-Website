@@ -1,0 +1,86 @@
+/* Body styling */
+.container {
+    display: grid;
+    place-items: center;
+}
+
+/* Slider container */
+.slider {
+    height: 350px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* Slide track */
+.slide-track {
+    display: flex; /* Ensure slides are in a row */
+    width: auto; /* Change to auto for dynamic width */
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+}
+
+/* Individual slide */
+.slide {
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid whitesmoke;
+    margin-right: 30px; /* Space between slides */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect on slides */
+.slide:hover {
+    transform: scale(1.1); /* Enlarge the slide */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow intensity */
+    background-color: #f0f0f0; /* Change background color */
+}
+
+/* Gradient overlay for slider */
+.slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+/* Navigation buttons */
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}

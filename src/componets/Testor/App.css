@@ -1,0 +1,122 @@
+.app {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login {
+    background-color: #f8b400;
+    color: #fff;
+  }
+  
+  .signup {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .hero {
+    max-width: 60%;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons button {
+    margin-right: 20px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signup-free {
+    background-color: #f8b400;
+    color: #fff;
+  }
+  
+  .book-demo {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .loyalty-info {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .points {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .points-earned {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .points-value {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .earn-points div {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .order-success {
+    text-align: center;
+  }
+  
+  .order-success img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  

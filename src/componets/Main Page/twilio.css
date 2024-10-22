@@ -1,0 +1,80 @@
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/library.less");
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: aqua;
+}
+
+.media {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+figure {
+  height: 370px;
+  overflow: hidden;
+  position: relative;
+}
+
+figure a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+figure:hover .media {
+  transform: scale(1.25);
+}
+
+figcaption {
+  color: #252830;
+  height: calc(100% - 30px);
+  margin: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+.body {
+  background-color: white;
+  bottom: 0;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+}
+
+svg {
+  height: inherit;
+  
+}
+
+svg text {
+  text-anchor: middle;
+}
+
+#alpha {
+  fill: white;
+}
+
+.title {
+  font-size: 28px;
+  font-family: "Montserrat";
+  letter-spacing: 5px;
+}
+
+#base {
+  fill: white;
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+}

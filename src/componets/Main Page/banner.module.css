@@ -1,0 +1,398 @@
+.container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Full viewport height */
+    background-color: #FFFFFF;
+    z-index: 0;
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.innerContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerData {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2% 0 4.5%;
+    position: relative;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+.bannerData::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/globe.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.bannerData h1 {
+    font-size: 3.0rem;
+    font-weight: 800;
+    margin-bottom: 2%;
+    display: inline-block;
+    width: auto;
+    margin-top: 1%;
+}
+
+.bannerData p {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.bannerImage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.bannerImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 15px 80px;
+    border-radius: 20px;
+    background-color: #f8b400;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #222222;
+    box-shadow: 0 8px 16px rgba(255, 255, 254, 0.4);
+    color: #FEB500;
+}
+
+.polygonBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%, 60% 40%);
+    z-index: -1;
+}
+
+.floatingCard {
+    position: absolute;
+    top: 16%;
+    right: 3%;
+    width: 350px;
+    height: 450px;
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url('../assets/bannerImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.servicesCard {
+    position: absolute;
+    top: 6%;
+    right: 15%;
+    width: 350px;
+    height: 450px;
+    background-color: #FEB500;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 0.7;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Keyframes for moving individual service cards with increased distance */
+@keyframes snapMoveUp {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-30%);
+    }
+    20% {
+        transform: translateY(-60%);
+    }
+    30% {
+        transform: translateY(-90%);
+    }
+    40% {
+        transform: translateY(-120%);
+    }
+    50% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(-150%);
+    }
+}
+
+/* Apply the animation to the individual service cards */
+.serviceCard {
+    width: 100%;
+    height: 25%; /* Increased height to accommodate quotes */
+    background-color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Animation configuration */
+    animation: snapMoveUp 4s ease-in-out infinite;
+    animation-delay: calc(var(--index) * 0.6s); /* Adjusted delay for quicker sequence */
+}
+
+/* Set variable to control the delay based on card order */
+.serviceCard:nth-child(1) { --index: 0; }
+.serviceCard:nth-child(2) { --index: 1; }
+.serviceCard:nth-child(3) { --index: 2; }
+.serviceCard:nth-child(4) { --index: 3; }
+.serviceCard:nth-child(5) { --index: 4; }
+.serviceCard:nth-child(6) { --index: 5; }
+
+.serviceCard p {
+    margin: 0;
+    font-size: 1.0rem;
+    text-align: center;
+    color: #222222;
+    font-weight: bold;
+}
+
+.offerCard {
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    width: 150px;
+    height: 30px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.quote {
+    font-size: 0.6rem;
+    color: #888888;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.tags {
+    font-size: 24px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #FEB500;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.btn a:hover {
+    color: #222222;
+}
+
+.btn svg {
+    font-weight: bold; /* Makes the icon bold */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.btn:hover svg {
+    color: #FEB500; /* Color change on hover */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.textVariant1 {
+    color: #222222;
+    animation: slideInFromLeft 1s forwards, fadeOut 1s forwards 10s;
+    font-size: 2.8rem;
+}
+
+.textVariant2 {
+    color: #307975;
+    animation: fadeIn 1s forwards;
+    font-size: 2.8rem;
+}
+
+/* Existing media queries */
+
+/* Add media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        width: 100%;
+        padding: 50px;
+        padding-top: 20px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .innerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bannerData {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .bannerData h1 {
+        font-size: 6vw; /* Responsive font size */
+        text-align: start;
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        white-space: normal; /* Allow text to wrap onto the next line */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .bannerData p {
+        font-size: 2vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 40px 0;
+        text-align: start;
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        white-space: normal; /* Allow text to wrap onto the next line */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px 40px;
+    }
+
+    .bannerImage {
+        display: none;
+    }
+}
+
+/* Additional smaller screen adjustments */
+@media (max-width: 480px) {
+    .bannerData{
+        width: 100%;
+        height: 300px;
+    }
+    .bannerData h1 {
+        font-size: 1.3rem;
+        padding-bottom: 6%;
+        margin: 0 auto;
+        margin-top: -2%;
+    }
+
+    .textVariant1 {
+        color: #222222;
+        animation: slideInFromLeft 1s forwards, fadeOut 1s forwards 10s;
+        font-size: 1.3rem;
+    }
+    
+    .textVariant2 {
+        color: #307975;
+        animation: fadeIn 1s forwards;
+        font-size: 1.3rem;
+    }
+
+    .bannerData p {
+        font-size: 0.8rem;
+        margin-bottom: 2%;
+    }
+
+    .btn {
+        padding: 8px 30px;
+        margin-bottom: 3%;
+    }
+
+    .floatingCard {
+        height: 150px;
+    }
+
+    .quote {
+        font-size: 0.6rem;
+    }
+}

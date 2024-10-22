@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    margin-left: -4%;
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+    margin-bottom: 5%;
+    background-color: #FFFFFF;
+  }
+
+  .innerContainer {
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(46, 32, 51, 0.4); /* Increased shadow for more prominence */
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolutely positioned blobs */
+  }
+
+  .content {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .content h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 15%;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    text-align: justify; /* Added this line */
+    font-size: medium;
+    margin: 0 15%;
+  }
+  
+  .cardsOne{
+    margin-top: 1%;
+  }
+  

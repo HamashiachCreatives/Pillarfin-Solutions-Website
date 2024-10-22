@@ -1,0 +1,53 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-top: -3.55%;
+    margin-left: -4%;
+    background-color: #FEB500;
+    height: 40px;
+}
+
+.main  > .Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.main > .Navbar > .nav-logo{
+    font-weight: 700;
+    font-size: 21px;
+    margin: 15px;
+}
+
+.main > .Navbar > .nav-items> a{
+     color: #222222;
+     font-size: 16px;
+     font-weight: 600;
+     text-decoration: none;
+     margin-right: 50px;
+     position: relative;
+     opacity: 0.9;
+}
+
+.main > .Navbar > .nav-items> a:hover{
+    opacity: 1;
+}
+
+.main > .Navbar > .nav-items> a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    color: #222222;
+    transition: all .45s ;
+}
+
+.main > .Navbar > .nav-items> a:hover::before{
+    width: 100%;
+}
+

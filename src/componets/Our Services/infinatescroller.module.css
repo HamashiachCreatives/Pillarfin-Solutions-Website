@@ -1,0 +1,157 @@
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #feb500;
+  color: white;
+  font-weight: bold;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  z-index: 2;
+  display: block;
+}
+
+.navButton:hover{
+  background-color: #222222;
+}
+
+.navButton.left {
+  left: 35%;
+  top: 88%;
+}
+
+.navButton.right {
+  right: 35%;
+  top: 88%;
+}
+
+
+.cardsOne {
+  margin-top: 1%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #feb500;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 350px;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 5%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: rotate(-3deg) translateY(-2px);
+  background-color: #222222;
+  box-shadow: 0 -4px 16px rgba(250, 246, 246, 0.9);
+}
+
+.cardy {
+  margin: 20px 5px;
+  transition: color 0.3s ease;
+}
+
+.cardy h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cardy p {
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .cardy h2,
+.card:hover .cardy p {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.toggles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.toggle {
+  width: 15px;
+  height: 15px;
+  background-color: #307975;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle:hover {
+  background-color: #bbb;
+}
+
+.toggle.active {
+  background-color: #333;
+}
+
+/* Media Queries for responsiveness and disabling hover effects on mobile */
+
+@media (min-width: 768px) {
+  .card {
+    padding: 30px;
+  }
+
+  .cardy h2 {
+    font-size: 1.75rem;
+  }
+
+  .cardy p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsOne {
+    width: 50%;
+  }
+
+  .card {
+    padding: 40px;
+  }
+
+  .cardy h2 {
+    font-size: 2rem;
+  }
+
+  .cardy p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navButton{
+    display: none;
+  }
+  .card:hover {
+    transform: none;
+    background-color: #feb500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .card:hover .cardy h2,
+  .card:hover .cardy p {
+    transform: none;
+    color: #333;
+  }
+}

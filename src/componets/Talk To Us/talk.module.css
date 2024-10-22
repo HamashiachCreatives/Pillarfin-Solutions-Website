@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  height: auto;
+  z-index: 1;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.messageForm {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  top: -50px; /* Adjust this value to position the popup just above the input */
+  left: 0;
+  background: linear-gradient(135deg, #ff6f91, #d500f9); /* Purple-pink gradient background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for the popup */
+.popup-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.popup-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

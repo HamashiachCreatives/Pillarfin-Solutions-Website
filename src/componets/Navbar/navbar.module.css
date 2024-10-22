@@ -1,0 +1,251 @@
+.container {
+  width: 100vw;
+  margin: 0 auto;
+  top: 0;
+  background-color: #FEB500;
+  border-bottom: 1px solid #222222;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  position: relative;
+  padding: 15px 0;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.logoContainer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.logoContainer a h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.polygonBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #222222;
+  clip-path: polygon(75% 0, 100% 0, 100% 100%, 60% 100%);
+  z-index: -1;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.talkButton {
+  background-color: #FEB500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.talkButton a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.talkButton:hover {
+  background-color: #FEB500;
+  color: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.talkButton a:hover {
+  color: #222222;
+  font-weight: bold;
+  font-size: large;
+}
+
+.navToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  color: #222222;
+}
+
+.logosImage{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  
+}
+
+.logosDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: start;
+  
+}
+
+.logosDetails h2{
+  text-align: left;
+}
+
+.logosDetails p{
+  text-align: left;
+  font-size: 12px;
+  margin-left: -3%;
+  margin-top: -4%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .innerContainer {
+    width: 70%;
+    margin: 0 10%;
+  }
+
+  .linksContainer {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FEB500;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .linksContainer a {
+    margin-left: 17%;
+  }
+
+  .linksContainer .talkButton {
+    background-color: #222222;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -16%;
+  }
+
+  .linksContainer .talkButton a {
+    color: #FEB500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .linksContainer.open {
+    display: flex;
+  }
+
+  .navToggle {
+    display: flex;
+  }
+
+  .polygonBackground {
+    display: none;
+  }
+
+  .buttonContainer {
+    margin-top: 10px;
+  }
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logosImage{
+    margin-top: 4%;
+  }
+
+  .logoContainer a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .logoContainer a h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 6%;
+  }
+
+  .link{
+    margin: 0 32%;
+  }
+  .logosDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+    margin-top: 2%;
+  }
+  
+  .logosDetails h2{
+    text-align: left;
+    font-size: 10px;
+  }
+  
+  .logosDetails p{
+    text-align: left;
+    font-size: 8px;
+    margin-left: -10%;
+    margin-top: 1%;
+  }
+}

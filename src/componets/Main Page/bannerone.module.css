@@ -1,0 +1,397 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    background-color: #FFFFFF;
+    z-index: 0;
+}
+
+.innerContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerData {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2% 0 4.5%;
+    position: relative;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.bannerData::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.bannerData h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    margin-top: 5%;
+    display: inline-block;
+    width: auto;
+}
+
+.bannerData p {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.bannerImage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.bannerImageOne {
+    display: none;
+}
+
+.bannerImage img {
+    width: 80%;
+    height: 80%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 15px 80px;
+    border-radius: 20px;
+    background-color: #f8b400;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #222222;
+    box-shadow: 0 8px 16px rgba(255, 255, 254, 0.4);
+    color: #FEB500;
+}
+
+.polygonBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%, 60% 40%);
+    z-index: -1;
+}
+
+.floatingCard {
+    position: absolute;
+    top: 16%;
+    right: 3%;
+    width: 380px;
+    height: 480px;
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url('../assets/bannerImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.servicesCard {
+    position: absolute;
+    top: 6%;
+    right: 8.5%;
+    width: 430px;
+    height: 530px;
+    background-color: #FEB500;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 0.9;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Apply the animation to the individual service cards */
+.serviceCard {
+    width: 100%;
+    height: 20%; /* Increased height to accommodate quotes */
+    background-color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard p {
+    margin: 0;
+    font-size: 1.0rem;
+    text-align: center;
+    color: #222222;
+    font-weight: bold;
+    margin: 0 5%;
+    font-weight: 800;
+}
+
+.offerCard {
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    width: 150px;
+    height: 30px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.quote {
+    font-size: 0.6rem;
+    color: #222222;
+    font-style: italic;
+    margin-top: 5px;
+    padding: 0px 5%;
+    padding-bottom: 1%;
+    font-weight: 700;
+}
+
+.tags {
+    font-size: 24px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #FEB500;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: 5%;
+}
+
+.btn a:hover {
+    color: #222222;
+}
+
+.btn svg {
+    font-weight: bold; /* Makes the icon bold */
+}
+
+.btn:hover svg {
+    color: #FEB500; /* Color change on hover */
+}
+
+.textVariant1 {
+    color: #222222;
+}
+
+.textVariant2 {
+    color: #307975;
+}
+
+/* Existing media queries */
+
+/* Add media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        padding: 50px;
+        padding-top: 20px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .innerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bannerData {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .bannerData h1 {
+        font-size: 6vw; /* Responsive font size */
+        text-align: start;
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        white-space: normal; /* Allow text to wrap onto the next line */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .bannerData p {
+        font-size: 2vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 40px 0;
+        text-align: start;
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        white-space: normal; /* Allow text to wrap onto the next line */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px 40px;
+    }
+
+    .bannerImage {
+        display: none;
+        height: auto;
+    }
+
+    .bannerImageOne {
+        display: block;
+    }
+
+    .floatingCard {
+        position: absolute;
+        top: 9%;
+        right: 3%;
+        width: 400px;
+        height: 500px;
+        background-color: #ffffff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-image: url('../assets/bannerImage.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .servicesCard {
+        margin-top: -3%;
+        position: absolute;
+        width: 300px; /* Increased width for better visibility */
+        height: 450px; /* Increased height for better visibility */
+        background-color: #FEB500;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        opacity: 0.9;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .floatingCard {
+        display: none;
+    }
+
+    .polygonBackground {
+        display: none;
+    }
+}
+
+/* Additional smaller screen adjustments */
+@media (max-width: 480px) {
+    .bannerData {
+        width: 100%;
+        margin-top: -4%;
+        height: 300px;
+        padding: 10px; /* Adjust padding */
+    }
+
+    .bannerData h1 {
+        font-size: 1.9rem;
+        padding-bottom: 6%;
+        margin: 0 auto;
+        margin-top: -2%;
+        display: none; /* Hide on very small screens */
+    }
+
+    .bannerData p {
+        font-size: 0.8rem;
+        margin-bottom: 2%;
+        display: none; /* Hide on very small screens */
+    }
+    
+
+    .btn {
+        padding: 8px 30px;
+        margin-bottom: 3%;
+        display: none; /* Hide on very small screens */
+    }
+
+    .floatingCard {
+        height: 150px;
+        width: 250px;
+    }
+
+    .servicesCard {
+        width: 300px; /* Increased width for better visibility */
+        height: 450px; /* Increased height for better visibility */
+    }
+
+    .serviceCard {
+        width: calc(100% / 2); /* Ensures cards are at least 1.5 times bigger */
+        height: calc(100% / 2); /* Ensures cards are at least 1.5 times bigger */
+    }
+
+    .serviceCard p {
+        font-size: 1rem;
+    }
+
+    .quote {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .servicesCard {
+        width: 260px; /* Further adjustments for smaller screens */
+        height: 360px; /* Further adjustments for smaller screens */
+    }
+}

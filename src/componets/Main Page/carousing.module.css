@@ -1,0 +1,113 @@
+/* sectionfive.module.css */
+
+/* Container for the slider */
+.sliderContainer {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+    gap: 16px; /* Space between cards */
+    padding: 10px; /* Padding around the items */
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height as needed */
+  }
+  
+  /* Individual item within the slider */
+  .sliderItem {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 300px; /* Set a fixed width for each card */
+    scroll-snap-align: start; /* Align items to the start */
+  }
+  
+  /* Wrapper to handle card items */
+  .sliderWrapper {
+    display: flex;
+    gap: 16px;
+    width: max-content; /* Adjust to accommodate all items */
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid whitesmoke;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    padding: 20px;
+    margin: 0; /* Remove margin for a cleaner look */
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 105, 135, 0.2), rgba(0, 204, 255, 0.2));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+  
+  .card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    background-color: #f0f8ff; /* Light background color on hover */
+  }
+  
+  .card h1, .card p {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+  }
+  
+  .card:hover h1 {
+    color: #7c621f; /* Change text color on hover */
+  }
+  
+  .card:hover p {
+    color: #333; /* Darker text color on hover */
+  }
+  
+  /* Styling for dots (pagination) */
+  .slick-dots li button:before {
+    font-size: 16px; /* Increase this value for bigger dots */
+    color: #000; /* Change the color as needed */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #007bff; /* Color for the active dot */
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media screen and (max-width: 768px) {
+    .sliderContainer {
+      padding: 5px; /* Adjust padding */
+    }
+    .sliderItem {
+      width: 250px; /* Adjust card width for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sliderContainer {
+      padding: 5px; /* Adjust padding */
+    }
+    .sliderItem {
+      width: 100%; /* Full width card */
+    }
+    .card h1 {
+      font-size: 2.1rem; /* Adjust font size */
+    }
+    .card p {
+      font-size: 1rem; /* Adjust font size */
+    }
+  }
+  

@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 25px;
+  width: 100vw;
+  height: 950px;
+  z-index: 1;
+  margin-bottom: 5%;
+  background-color: #FEB500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px; /* Added padding for small screens */
+}
+
+.innerContainer {
+  z-index: 1;
+  box-shadow: 0 -4px 16px rgba(250, 246, 246, 0.6);
+  width: 100%;
+  max-width: 90%; /* Added max-width for responsiveness */
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: auto; /* Changed from fixed height to auto */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centered content for mobile */
+  justify-content: center;
+  padding: 0 20px; /* Reduced padding */
+  margin-top: 0;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 3.5rem; /* Adjusted for mobile */
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.content p {
+  text-align: justify;
+  font-size: large; /* Adjusted for mobile */
+  margin: 0;
+}
+
+.cardsOne {
+  margin-top: 15%;
+  width: 100%; /* Ensure cards container takes full width */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .container {
+      height: auto; /* Adjust height for mobile */
+      padding: 25px;
+      margin: 0 auto;
+  }
+
+  .innerContainer{
+    padding: 25px;
+  }
+
+  .content h1 {
+      font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .content p {
+      font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+
+  .cardsOne {
+      margin-top: 10%; /* Adjust margin for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 100vw;
+    overflow: hidden;
+    height: auto; /* Adjust height for mobile */
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.innerContainer{
+  padding: 25px;
+  margin: 0 auto;
+}
+
+  .content {
+      padding: 0 10px; /* Further reduce padding for very small screens */
+  }
+
+  .content h1 {
+      font-size: 1rem; /* Even smaller font size for very small screens */
+  }
+
+  .content p {
+      font-size: 0.75rem; /* Even smaller font size for very small screens */
+  }
+
+  .cardsOne{
+    margin-bottom: 5%;
+  }
+}

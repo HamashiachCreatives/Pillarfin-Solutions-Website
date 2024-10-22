@@ -1,0 +1,266 @@
+/* Container Styles */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  height: 3200px;
+  z-index: 1;
+  margin-bottom: 2%;
+}
+
+.innerContainer {
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(46, 32, 51, 0.4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content Section Styles */
+.content {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: -11%;
+  padding: 0px 40px;
+  padding-top: 0px;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 3.0rem;
+  margin: 0 15%;
+  margin-bottom: 10px;
+  margin-top: 15%;
+}
+
+.content p {
+  text-align: justify;
+  font-size: medium;
+  margin: 0 15%;
+  margin-bottom: 20%;
+}
+
+/* Navigation Button Styles */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #feb500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+}
+
+.navButton:hover {
+  background-color: #222222;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButton.left {
+  left: 35%;
+  top: 27.8%;
+}
+
+.navButton.right {
+  right: 35%;
+  top: 27.8%;
+}
+
+/* Cards Container Styles */
+.cards {
+  display: flex;
+  overflow: hidden;
+  width: 70%;
+  height: 450px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+/* General hover styles for cards */
+.card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid whitesmoke;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 300px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 105, 135, 0.2), rgba(0, 204, 255, 0.2));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.card:hover::before,
+.centerCard::before {
+  opacity: 1;
+}
+
+.card:hover,
+.centerCard {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  background-color: #f0f8ff;
+}
+
+.card h1, .card p {
+  position: relative;
+  z-index: 1;
+}
+
+.card h1{
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+
+.card:hover h1,
+.centerCard h1 {
+  color: #7c621f;
+}
+
+.card:hover p,
+.centerCard p {
+  color: #333;
+}
+
+/* Center Card Autoplay Styles */
+.centerCard {
+  background-color: #f0f8ff; /* Hover color applied to the center card */
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* When hovering another card, the center card returns to normal */
+.card:not(:hover) .centerCard {
+  transform: none;
+  box-shadow: none;
+  background-color: white;
+}
+
+/* Slick Dots Customization */
+.slick-dots li button:before {
+  font-size: 16px; /* Increase this value for bigger dots */
+  color: #000; /* Change the color as needed */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff; /* Color for the active dot */
+}
+
+.cardTitles{
+  font-size: larger;
+}
+
+/* Slider Container */
+.sliderContainer {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(100% / 3 * 6); /* Set a default width */
+}
+
+/* sectionfive.module.css */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+
+  .cards {
+    width: 100%;
+    height: 350px; /* Adjusted container height */
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 5%;
+  }
+
+  .card {
+    flex: 0 0 calc(100% / 2); /* Show 2 cards at a time */
+    height: 300px;
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .sliderContainer {
+    width: calc(100% * 4); /* Adjust width to fit two cards at a time */
+  }
+
+  .navButton {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h1 {
+    font-size: 2.1rem;
+  }
+
+  .card {
+    flex: 0 0 100%; /* Full width card */
+    height: 280px;
+    margin: 10px 0;
+  }
+
+  .cards {
+    width: 100%;
+    height: auto;
+  }
+
+  .sliderContainer {
+    width: 100%; /* One card per view */
+  }
+
+  .navButton {
+    display: none;
+  }
+}

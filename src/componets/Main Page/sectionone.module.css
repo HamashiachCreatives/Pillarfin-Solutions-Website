@@ -1,0 +1,156 @@
+/* General styles */
+.container {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  z-index: 1;
+  margin-bottom: 5%;
+  margin-top: -4%;
+  display: flex;
+  margin-left: -7%;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center child elements horizontally */
+  width: 100%; /* Ensure it uses full width */
+  max-width: 1200px; /* Optional: limit maximum width for better layout control */
+  z-index: 1;
+  margin: 20px auto;
+  position: relative; /* Needed for absolutely positioned blobs */
+  overflow: hidden; /* Ensure blobs don't overflow */
+}
+
+.innerContainer::before {
+  top: -75px; /* Adjusted position */
+  left: -75px; /* Adjusted position */
+  transform: scale(1.5); /* Adjusted scale */
+  clip-path: path('M150,30 C210,30 240,60 240,90 C240,120 210,150 180,160 C150,170 120,150 90,120 C60,90 30,60 60,40 C90,20 120,20 150,30 Z');
+}
+
+.innerContainer::after {
+  bottom: -75px; /* Adjusted position */
+  right: -75px; /* Adjusted position */
+  transform: scale(1.8); /* Adjusted scale */
+  clip-path: path('M150,45 C210,45 240,75 240,105 C240,135 210,165 180,175 C150,185 120,165 90,135 C60,105 30,75 60,55 C90,35 120,35 150,45 Z');
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
+  padding: 0px 40px;
+  padding-top: 0px;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 15%;
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+
+.content p {
+  text-align: justify; /* Added this line */
+  font-size: medium;
+  margin: 0 15%;
+}
+
+.contentOne {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+.contentOne h1 {
+  text-align: center;
+  font-size: x-large;
+  margin: 0 15%;
+  margin-bottom: 10px;
+}
+
+.contentOne p {
+  text-align: justify; /* Added this line */
+  font-size: medium;
+  margin: 0 15%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    margin-top: -14%;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .innerContainer {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: none; /* Remove box-shadow for smaller screens */
+  }
+
+  .innerContainer::before,
+  .innerContainer::after,
+  .blob3 {
+    width: 200px;
+    height: 200px;
+    transform: scale(1);
+  }
+
+  .content, .contentOne {
+    margin: 0 5%;
+    padding: 0 10px;
+  }
+
+  .content h1, .contentOne h1 {
+    font-size: large;
+    margin-bottom: 2%;
+    margin: 0 5%;
+  }
+
+  .content p, .contentOne p {
+    font-size: small;
+    margin: 0 5%;
+  }
+
+  .cardStyles {
+    margin-top: -5%;
+  }
+
+  .carly{
+    margin-top: 45%;
+  }
+
+  .cardsOne {
+    margin-top: 0;
+  }
+
+  .contentOne {
+    padding-top: 20px; /* Adjusted padding-top for mobile view */
+    display: flex;
+    align-items: center;
+  }
+
+  .contentOne h1 {
+    font-size: medium;
+    font-weight: 700;
+  }
+
+  .contentOne p {
+    font-size: small;
+    display: flex;
+    align-items: center;
+    text-align: start;
+  }
+}

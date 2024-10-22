@@ -1,0 +1,91 @@
+/* cardFour.module.css */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  pointer-events: none;
+}
+
+.card {
+  width: 250px;
+  height: auto;
+  color: #ffffffda;
+  padding: 1.5rem;
+  background-color: #202022;
+  pointer-events: auto;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 150ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  position: relative;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+}
+
+.cardTitle::before {
+  content: '';
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px #bb86fc;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small tablets and larger phones */
+    margin-right: 5%;
+  }
+
+  .card {
+    max-width: 12rem; /* Reduce card width on smaller screens */
+    padding: 1rem; /* Reduce padding for better fit */
+  }
+
+  .description {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 card per row on very small screens */
+    margin-right: 5%;
+  }
+
+  .card {
+    max-width: 100%; /* Card takes full width on small screens */
+    padding: 0.8rem; /* Further reduce padding for small screens */
+  }
+
+  .description {
+    font-size: 0.7rem; /* Further reduce font size for very small screens */
+  }
+}

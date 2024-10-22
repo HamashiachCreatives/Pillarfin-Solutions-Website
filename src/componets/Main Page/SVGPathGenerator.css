@@ -1,0 +1,33 @@
+.svg-path-generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  svg-path-generator h1 {
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    margin: 20px 0;
+  }
+  
+  canvas {
+    border: 1px solid #000;
+    margin-top: 20px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .output {
+    margin-top: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 500px;
+  }
+  
